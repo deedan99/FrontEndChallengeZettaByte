@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale-1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		#container {
+			display: flex;
+			flex-direction: row;
+			background= #F4F4F4;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.box{
+			background: #FFFFFF;
+			border: #f4f4f4 solid 10px;
+			padding: 1rem;
+			text-align: left;
+			font-family: sans-serif;
+		}
+		.utama{
+			background: #f4f4f4;
+		}
+		.header{
+			background: "background.jpg";
+			text-align: center;
+			justify-content: center;
+			font-family: sans-serif;
+		}
+		.header-wrapper:{
+			border: #f4f4f4 solid 10px;
+			padding: 1rem;
+		}
+		.box:hover{
+			font-size: 40px;
+		}
+	</style>
+</head>
+<body class="utama">
+	<div class="header" background= "background.jpg">
+		<header class="header-wrapper" >
+			<h1>Simple Pricing!</h1>
+			<p>The most advanced customer support tools with a simple and affordable pricing. And you can always try for 30 days, free!</p>
+		</header>
+	</div>
+	<div id="container">
+		<div class="box">
+			<h3>BASIC</h3>
+			<h1>$4/Month</h1>
+			<p>10 Projects</p>
+			<p>10 Pages</p>
+			<p>100 MB Disk Space</p>
+			<button onclick= "buy()">
+				Buy Now
+			</button>
+		</div>
+		<div class="box">
+			<h3>STANDARD</h3>
+			<h1>$8/Month</h1>
+			<p>20 Projects</p>
+			<p>20 Pages</p>
+			<p>200 MB Disk Space</p>
+			<button onclick= "buy()">
+				Buy Now
+			</button>
+		</div>
+		<div class="box">
+			<h3>ADVANCED</h3>
+			<h1>$12/Month</h1>
+			<p>40 Projects</p>
+			<p>40 Pages</p>
+			<p>500 MB Disk Space</p>
+			<button onclick= "buy()">
+				Buy Now
+			</button>
+		</div>
+	</div>
+	<script>
+		function buy(){
+			alert("Alert Success");
+		}
+	</script>
+</body>
+</html>
