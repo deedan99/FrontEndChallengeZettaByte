@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale-1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+	<style>
+		#container {
+			display: flex;
+			flex-direction:row;
+			background= #F4F4F4;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+		}
+		.utama{
+			background: #f4f4f4;
+		}
+		.item{
+			background: #FFFFFF;
+			border: #f4f4f4 solid 10px;
+			padding: 1rem;
+			text-align: left;
+		}
+		.komentar{
+			background: #F4F4F4;
+			border: #f4f4f4 solid 10px;
+			padding: 1rem;
+			text-align: left;
+		}
+		.iconify{
+			justify-content: flex-start;
+		}
+	</style>
+</head>
+<body class="utama">
+	<div id="container">
+		<div class="item">
+			<p><font color="blue">Garry Newman</font> posted on your timeline<img src="profil.jpg" style="float:left;width:42px;height:42px;"></p>
+			<p><font color="grey">32 minutes ago</font></p>
+			<p>Remember the palce we were talking about the other night? Found it!</p>
+			<p><img src="download.jpg" alt="image" height="400" width="500"></p>
+			<p>
+				<span class="iconify" data-icon="typcn:heart-full-outline" data-inline="false" height: 50px; weight: 60px;></span> <font color="grey">Likes (5)</font>
+				<span class="iconify" data-icon="typcn:arrow-forward" data-inline="false" height: 50px; weight: 60px;></span><font color="grey"> Share</font>
+			</p>
+		</div>
+		<div class="komentar">
+			<p><font color="grey">1 comments</font></p>
+			<p>Alice Freeman<font color="grey"> June 10, 2018</font><img src="profil2.jpg" style="float:left;width:42px;height:42px;"></p>
+			<p>That's a wonderful place. Lorem ipsum dolor sit amet, consectetur adipscing elit. Fusce et eleifend ligula. Fusce posuere in sapien oc facilisis. Etiam sit amet justo non felis amare feugiat</p>
+			<p><font color="blue">Reply</font> <span class="iconify" data-icon="typcn:flag" data-inline="false"height: 50px; weight: 60px></span></p>
+			<p><input type="text"{width: 1000px; height: 1000px;} name="comment"/><img src="profil3.png" style="float:left;width:50px;height:40px;"></p>
+			<p><button (click)= "comment()">
+				Post Comment
+			</button></p>
+		</div>
+	</div>
+</body>
+</html>
