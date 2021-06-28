@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale-1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		.utama{
+			background: #f4f4f4;
+		}
+		#container {
+			display:flex;
+			flex-direction: row;
+		}
+		.item{
+			background: #FFFFFF;
+			border: #f4f4f4 solid 10px;
+			padding: 1rem;
+			text-align: left;
+		}
+		.itemkanan{
+			background: #FFFFFF;
+			text-align: right;
+			display:flex;
+			flex-direction: row;
+			align-self: flex-end;
+		}
+	</style>
+</head>
+<body class="utama">
+	<div id="container">
+		<div class="item">
+			<img src="download.jpg" alt="Top Winter Locations">
+			<h1>Top Winter Locations</h1>
+			<h2>More than 200 locations</h2>
+			<p>Cards provide context and an entry point to more robust information and views, 
+			and their content and quality can vary greatly</p>
+			<button (click)= "share()">
+				Share
+			</button>
+			<button (click)= "explore()">
+				Explore
+			</button>
+		</div>
+		<div class="item">
+			<img src="toproad.jpg" alt="Top eastern road trips">
+			<h1>Top eastern road trips</h1>
+			<h2>2,000 miles of wonder</h2>
+			<button (click)= "share()">
+				Share
+			</button>
+			<button (click)= "explore()">
+				Explore
+			</button>
+			</div>
+		<div class="item">
+			<img src="kangoroovalley.jpg" alt="Kangaroo Valley Safari">
+			<h1>Kangaroo Valley Safari</h1>
+			<h2>Free on Thursdays</h2>
+			<p>Cards provide context and an entry point to more robust information and views, 
+			and their content and quality can vary greatly</p>
+		</div>
+		<div class="item">
+			<img src="toproad.jpg" alt="Top eastern road trips">
+			<div class="itemkanan">
+					<a href='javascript:'>
+						<div class='itemkanan'>
+							<svg xmlns="http://www.w3.org/2000/svg" width="35" height="30"  preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M2.2 9.4c0 1.3.2 3.3 2 5.1c1.6 1.6 6.9 5.2 7.1 5.4c.2.1.4.2.6.2s.4-.1.6-.2c.2-.2 5.5-3.7 7.1-5.4c1.8-1.8 2-3.8 2-5.1c0-3-2.4-5.4-5.4-5.4c-1.6 0-3.2.9-4.2 2.3C11 4.9 9.4 4 7.6 4C4.7 4 2.2 6.4 2.2 9.4z" fill="black"/><rect x="0" y="0" width="24" height="24" fill="rgba(0, 0, 0, 0)" /></svg>
+							<span class="iconify icon:typcn:heart-full-outline icon-inline:false"></span>							</svg>
+						</div>
+					</a>
+					<a href='javascript:CreateBookmarkLink()'>
+						<div class='itemkanan'>
+							<svg width="35" height="30" " viewBox="0 0 24 24" xmlns='http://www.w3.org/2000/svg'>
+							<path d="M17 2H9C7.346 2 6 3.346 6 5v14c0 .514.104.946.308 1.285c.564.935 1.815 1.008 2.813.008l3.172-3.172a1.031 1.031 0 0 1 1.414 0l3.172 3.172c.491.491 1.002.74 1.52.74c.797 0 1.601-.629 1.601-2.033V5c0-1.654-1.346-3-3-3zM9 4h8c.551 0 1 .449 1 1v9.905l-2.451-2.247c-1.406-1.289-3.693-1.288-5.099 0L8 14.905V5c0-.551.449-1 1-1zm6.121 11.707c-.565-.565-1.318-.876-2.121-.876s-1.556.312-2.121.876L8 18.586v-2.324l3.126-2.866c1.033-.947 2.714-.947 3.747 0L18 16.262v2.324l-2.879-2.879z" fill="#626262"/>
+							<rect x="0" y="0" width="24" height="24" fill="rgba(0, 0, 0, 0)" /></svg>
+							<span class="iconify" data-icon="typcn:bookmark" data-inline="false"></span>
+						</div>
+					</a>
+					<a href='javascript:CreateLocationLink()'>
+						<div class='itemkanan'>
+							<svg xmlns="http://www.w3.org/2000/svg" width="35" height="30" viewBox="0 0 24 24"><path d="M12 5c1.609 0 3.12.614 4.254 1.73C17.38 7.837 18 9.309 18 10.87s-.62 3.03-1.745 4.139L12 19.193l-4.254-4.186c-1.125-1.107-1.745-2.576-1.745-4.139s.62-3.032 1.745-4.141A6.04 6.04 0 0 1 12 5m0-2a8.04 8.04 0 0 0-5.657 2.305a7.782 7.782 0 0 0 0 11.131L12 21.999l5.657-5.565a7.78 7.78 0 0 0 0-11.129A8.039 8.039 0 0 0 12 3zm0 5.499c.668 0 1.296.26 1.768.731a2.502 2.502 0 0 1 0 3.537c-.473.472-1.1.731-1.768.731s-1.295-.26-1.768-.731a2.502 2.502 0 0 1 0-3.537A2.49 2.49 0 0 1 12 8.499m0-1a3.501 3.501 0 1 0 2.475 5.975a3.503 3.503 0 0 0 0-4.951A3.489 3.489 0 0 0 12 7.499z" fill="black"/><rect x="0" y="0" width="24" height="24" fill="rgba(0, 0, 0, 0)" /></svg>
+							<span class="iconify" data-icon="typcn:location-outline" data-inline="false"></span>
+						</div>
+					<div class='total'></div>
+				<div style='clear:both'/>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
