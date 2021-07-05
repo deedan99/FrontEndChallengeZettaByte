@@ -1,0 +1,110 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>GFG User Details</title>
+
+	<!-- INCLUDING JQUERY-->
+	<script src=
+"https://code.jquery.com/jquery-3.5.1.js">
+	</script>
+
+	<!-- CSS FOR STYLING THE PAGE -->
+	<style>
+		#container {
+			display: flex;
+			flex-direction: rows;
+			background= #F4F4F4;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		.box{
+			background: #FFFFFF;
+			border: #f4f4f4 solid 10px;
+			padding: 1rem;
+			text-align: left;
+			font-family: sans-serif;
+		}
+		
+		.box:hover{
+			font-size: 40px;
+		}
+		
+		h1 {
+			text-align: center;
+			color: #006600;
+			font-size: xx-large;
+			font-family: 'Gill Sans',
+				'Gill Sans MT', ' Calibri',
+				'Trebuchet MS', 'sans-serif';
+		}
+		
+		.utama{
+			background: #f4f4f4;
+		}
+		
+	</style>
+</head>
+
+<body class= "utama">
+	<script>
+			$(document).ready(function () {
+
+			// FETCHING DATA FROM JSON FILE
+			$.getJSON("title-list.json",
+				function (data) {
+			var student = '';
+
+							// ITERATING THROUGH OBJECTS
+			$.each(data, function (key, value) {
+							
+							//CONSTRUCTION OF ROWS HAVING
+							// DATA FROM JSON OBJECT
+			student += value.certifier ;
+									
+			student += value.is_published ;
+
+			student += value.long_name;
+
+			student += value.short_name;
+
+			student += value.rncp_level;
+										
+			student += value.rncp_level_europe;
+										
+			student += value._id ;
+
+				});
+								
+						//INSERTING ROWS INTO TABLE
+			$('.box').append(student);
+				});
+			});
+		</script>
+	<div id= "container">
+		<!-- TABLE CONSTRUCTION-->
+		<div class="box">
+			<h3>CERTIFIER</h3>
+		</div>
+		<div class="box">
+			<h3>PUBLISHED</h3>
+		</div>
+		<div class="box">
+			<h3>LONG NAME</h3>
+		</div>
+		<div class="box">
+			<h3>SHORT NAME</h3>
+		</div>
+		<div class="box">
+			<h3>RNCP LEVEL</h3>
+		</div>
+		<div class="box">
+			<h3>RNCP LEVEL EUROPE</h3>
+		</div>
+		<div class="box">
+			<h3>ID</h3>
+		</div>
+</body>
+
+</html>
